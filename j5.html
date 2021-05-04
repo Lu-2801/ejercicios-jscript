@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myfunction(txt) {
+  document.getElementById("demo").innerHTML = txt
+  var d = getDay()
+  var m = getMonth()
+  var month
+  var day
+  if (d = 0) {
+    day = "Monday";
+  } else if (d = 1) {
+    day = "Tuesday";
+  } else if (d = 2) {
+    day = "Wednesday";
+  } else if (d = 3) {
+    day = "Thursday";
+  } else if (d = 4) {
+    day = "Friday";
+  } else if (d = 5) {
+    day = "Saturday";
+  } else {
+    day = "Sunday";
+  }
+  if (m = 0) {
+    month = "January";
+  } else if (m = 1) {
+    month = "Fabruary";
+  } else if (m = 2) {
+    month = "March";
+  } else if (m = 3) {
+    month = "April";
+  } else if (m = 4) {
+    month = "May";
+  } else if (m = 5) {
+    month = "June";
+  } else if (m = 6) {
+    month = "July";
+  } else if (m = 7) {
+    month = "August";
+  } else if (m = 8) {
+    month = "September";
+  } else if (m = 9) {
+    month = "October";
+  } else if (m = 10) {
+    month = "November";
+  } else {
+    month = "December";
+  }
+  document.getElementById("demo").innerHTML = day + getDate() + month + getFullYear()
+}
+</script>
+</head>
+<body>
+
+<p>Depend the part of the day click on one of the buttons.</p>
+
+<form>
+  <input type="button" onclick="myfunction('Good Morning!')" value="In the Morning">
+  <input type="button" onclick="myfunction('Good Afternoon!')" value="In the Afternoon">
+  <input type="button" onclick="myfunction('Good Evening!')" value="In the Evening">
+</form>
+
+<p id="demo"></p>
+
+</body>
+</html>
